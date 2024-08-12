@@ -1,0 +1,10 @@
+:root {
+    --yellow: #ffc107;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}

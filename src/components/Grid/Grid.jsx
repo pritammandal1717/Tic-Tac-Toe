@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Card from "../Card/card";
+import Card from "../Slot/Card";
 import './Grid.css'
 import CheckWinner from "../Helper/CheckWinner";
 
@@ -27,19 +27,19 @@ function Grid({ numberOfCards }) {
         setTurn(!turn);
     }
 
-    function reset(){
+    function reset() {
         setTurn(true);
         setWinner(null);
         setBoard(Array(numberOfCards).fill(""));
     }
 
-    function checkFull(){
+    function checkFull() {
         board.forEach(element => {
-            if(element == "O" || element == "X"){
+            if (element == "O" || element == "X") {
                 count++;
             }
         });
-        if(count == 9){
+        if (count == 9) {
             return true;
         }
         return false
@@ -61,7 +61,7 @@ function Grid({ numberOfCards }) {
             }
             <h2 className="turn-highlight">Current Turn : {(turn) ? "You" : "Your Friend"}</h2>
             <div className="grid">
-                {board.map((el, idx) => <Card gameEnd = {winner} key={idx} onPlay={play} player={el} index={idx} />)}
+                {board.map((el, idx) => <Card gameEnd={winner} key={idx} onPlay={play} player={el} index={idx} />)}
             </div>
         </div>
     );

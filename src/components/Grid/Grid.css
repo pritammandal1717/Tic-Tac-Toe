@@ -1,6 +1,9 @@
+/* .grid-wrapper{
+    max-width: fit-content;
+} */
 .grid {
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 350px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

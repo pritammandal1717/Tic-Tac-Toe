@@ -1,13 +1,12 @@
 import { FaPen, FaRegCircle, FaTimes } from 'react-icons/fa'
-import './Icon.css'
 
 function Icon({name}){
     if (name == "circle"){
-        return <FaRegCircle/>
+        return <FaRegCircle size={70}/>
     } else if(name == "cross"){
-        return <FaTimes/>
+        return <FaTimes size={70}/>
     } else{
-        return <FaPen/>
+        return <FaPen size={30}/>
     }
 }
 

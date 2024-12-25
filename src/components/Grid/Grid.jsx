@@ -59,7 +59,11 @@ function Grid({ numberOfCards }) {
                     <button className="reset" onClick={reset}>Reset Game</button>
                 )
             }
-            <h2 className="turn-highlight">Current Turn : {(turn) ? "You" : "Your Friend"}</h2>
+            {
+                (!(checkFull() || winner)) && (
+                    <h2 className="turn-highlight">Current Turn : {(turn) ? "You" : "Your Friend"}</h2>
+                )
+            }
             <div className="grid">
                 {board.map((el, idx) => <Card gameEnd={winner} key={idx} onPlay={play} player={el} index={idx} />)}
             </div>
